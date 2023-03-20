@@ -1,0 +1,47 @@
+h3 {
+    font-size: 140%;
+    color: yellow;
+}
+
+h4 {
+    font-size: 120%;
+    color: yellow;
+}
+
+h2 {
+    font-size: 160%;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+.weatherBtn{
+    width:30px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/new.png');    
+}
+
+input {
+    margin-top: 1%;
+}
+
+.forecast {
+    margin-left:1%;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+img {
+    width:25px;
+    height:25px;
+}
+
+.city {
+    margin-bottom: 2%;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <section class="hero is-link is-small">
+        <div class="hero-body">
+            <h1 class="title">
+                Weather Dashboard
+            </h1>
+        </div>
+    </section>
+    <section class="section">
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <div class="container">
+                    <div class="notification is-light">
+                        <input class="input" type="text" placeholder="Enter city name">
+                        <input class="button is-success is-fullwidth is-focused" id="submit" type="submit" value="Submit input"><hr>
+                        <div id="cities"></div><hr>
+                        <input class="button is-warning is-fullwidth is-focused" id="clear" type="submit" value="Clear History">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-hidden">
+                <div class="container notification is-light">
+                    <div class="notification is-black current">
+                    <div id="heading">
+                      <h3></h3>
+                      <img>
+                    </div>
+                    <p></p><p></p><p></p>   
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>5-Day Forecast</h2>
+                    <div class="notification is-light">
+                      <div class="columns">
+                        <div class="column forecast" id="day1">
+                          <h4></h4>
+                          <img>
+                          <p></p><p></p><p></p>  
+                        </div>
+                        <div class="column forecast" id="day2">
+                          <h4></h4>
+                          <img>
+                          <p></p><p></p><p></p>
+                        </div>
+                        <div class="column forecast" id="day3">
+                          <h4></h4>
+                          <img>
+                          <p></p><p></p><p></p>
+                        </div>
+                        <div class="column forecast" id="day4">
+                          <h4></h4>
+                          <img>
+                          <p></p><p></p><p></p>
+                        </div>
+                        <div class="column forecast" id="day5">
+                          <h4></h4>
+                          <img>
+                          <p></p><p></p><p></p>
+                        </div>
+                      </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
