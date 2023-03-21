@@ -15,24 +15,22 @@ function getCityCoordinates(cityName) {
 
     fetch(url)
     .then(function(response){
-        if(response.status === 200){
-            return response.json() 
-           .then(function(data){
-            console.log(data);
-            if(data.length === 0){
-                alert('Please spell the city name accurately!!')
-            }else{
-                let latitude = data[0].lat;
-                let longitude = data[0].lon;
-                $hidden.setAttribute('class','column');   
-                getCurrentWeather(latitude,longitude);
-                getForecastData(latitude,longitude);
-            }
-            })
-        }else {
-            alert('Error: ' + response.statusText);
+        return response.json();
+    }).then(function(data){
+        console.log(data);
+        if(data.length === 0){
+            alert('Please spell the city name accurately!!')
+        }else{
+            let latitude = data[0].lat;
+            let longitude = data[0].lon;
+            $hidden.setAttribute('class','column');   
+            getCurrentWeather(latitude,longitude);
+            getForecastData(latitude,longitude);
         }
-    });
+    })
+    .catch(function (error) {
+        alert('Unable to fetch city coordinates. Please spell it correctly!');
+    });    
 }    
 
 //gets current weather if we give latitude and longitude of the city
