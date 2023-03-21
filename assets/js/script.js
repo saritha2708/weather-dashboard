@@ -11,7 +11,7 @@ getStorage(); // calls the function when page loads
 
 //gets coordinates of the city that we enter in the search bar
 function getCityCoordinates(cityName) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=3&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=3&appid=${API_KEY}`;
 
     fetch(url)
     .then(function(response){
@@ -48,7 +48,7 @@ function getCurrentWeather(lat,lon) {
 
 //gets forecast weather if we give latitude and longitude of the city
 function getForecastData(lat,lon) {
-    let forecastURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
+    let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
     fetch(forecastURL)
     .then(function(response){
         return response.json()
